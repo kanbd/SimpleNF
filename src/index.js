@@ -5,7 +5,8 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-
-ReactDOM.render(<Provider><App /></Provider>, document.getElementById('root'));
+import simpleApp from './redux/reducer';
+const store = createStore(simpleApp)
+ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 
 serviceWorker.unregister();
