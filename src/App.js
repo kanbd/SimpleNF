@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import MyList from './Components/myList';
 import Recommendation from './Components/recommendation';
 import {storeData} from './redux/actions';
