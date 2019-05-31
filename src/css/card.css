@@ -1,0 +1,14 @@
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+}
+.img-wrapper:hover .button-wrapper {
+  visibility: visible;
+  display: flex;
+  justify-content: center;
+}
+.title-wrapper {
+  display: flex;
+  justify-content: center;
+}

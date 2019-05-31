@@ -1,9 +1,10 @@
 import React from 'react';
-import './App.css';
 import MyList from './Components/myList';
 import Recommendation from './Components/recommendation';
 import {storeData} from './redux/actions';
 import { connect } from 'react-redux';
+import './css/app.css';
+// mock data
 const rawData = {
   'mylist' : [
     {
@@ -42,11 +43,12 @@ const rawData = {
   }
 class App extends React.Component{
   componentWillMount(){
+    // init the store with mock data
     this.props.dispatch(storeData(rawData));
   }
   render() {
-    return (<div>
-      <h1>Netflex like website</h1>
+    return (<div className="body-container">
+      <h1>Fake Netflex</h1>
       <MyList />
       <Recommendation />
     </div>);

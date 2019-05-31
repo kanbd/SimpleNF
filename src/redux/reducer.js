@@ -7,6 +7,7 @@ export default function simpleApp(state = initialState, action) {
   switch (action.type) {
     case 'REMOVE':
       let mylist_arr = state.mylist;
+      console.log(action.index);
       mylist_arr.splice(action.index,1);
       return Object.assign({}, state, {
         mylist: mylist_arr,
