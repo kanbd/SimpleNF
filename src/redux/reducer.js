@@ -5,19 +5,19 @@ const initialState = {
 
 export default function simpleApp(state = initialState, action) {
   switch (action.type) {
-    case 'REOMVE':
-        let arr = state.mylist;
-        arr.splice(action.index,1);
-        return Object.assign({}, state, {
-          mylist: arr,
-          recommendations: [...state.recommendations, action.data]
-        });
+    case 'REMOVE':
+      let mylist_arr = state.mylist;
+      mylist_arr.splice(action.index,1);
+      return Object.assign({}, state, {
+        mylist: mylist_arr,
+        recommendations: [...state.recommendations, action.data]
+      });
     case 'ADD':
-      let arr = state.recommendations;
-      arr.splice(action.index,1);
+      let rec_arr = state.recommendations;
+      rec_arr.splice(action.index,1);
       return Object.assign({}, state, {
         mylist: [...state.mylist, action.data],
-        recommendations: arr
+        recommendations: rec_arr
       });
     case 'STORE_DATA':
         return Object.assign({}, state, {

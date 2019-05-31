@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import {ADD} from '../redux/actions';
+import {ADD,REMOVE} from '../redux/actions';
 class MoiveCard extends React.Component{
   handleClickAdd=()=>{
     this.props.dispatch(ADD({data:this.props.MoiveData,index:this.props.index}))
   }
   handleClickRemove=()=>{
-    this.props.dispatch(ADD({data:this.props.MoiveData,index:this.props.index}))
+    this.props.dispatch(REMOVE({data:this.props.MoiveData,index:this.props.index}))
   }
   render() {
     return <div>
